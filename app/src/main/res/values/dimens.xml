@@ -1,0 +1,21 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="sp16">16sp</dimen>
+    <dimen name="dp38">38dp</dimen>
+    <dimen name="dp48">48dp</dimen>
+    <dimen name="dp1">1dp</dimen>
+    <dimen name="dp2">2dp</dimen>
+    <dimen name="dp40">40dp</dimen>
+    <dimen name="dp100">100dp</dimen>
+    <dimen name="dp75">75dp</dimen>
+    <dimen name="news_icon_height">75dp</dimen>
+    <dimen name="dp180">180dp</dimen>
+    <dimen name="dp56">56dp</dimen>
+    <dimen name="dp0">0dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="toolbar_margin_top">0dp</dimen>
+    <dimen name="pull_critical_distance">70dp</dimen>
+</resources>

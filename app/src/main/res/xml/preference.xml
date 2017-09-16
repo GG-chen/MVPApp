@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="常规"
+    >
+    <PreferenceCategory
+        android:title="系统设置"
+        >
+        <SwitchPreference
+            android:key="pref_key_no_image"
+            android:defaultValue="false"
+            android:title="无图模式"
+            android:summary="开启后在非Wifi下不加载图片"
+            />
+
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="应用管理"
+        >
+        <Preference
+            android:key="pref_key_cache"
+            android:title="清理内存"
+            android:summary="0M" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="关于"
+        >
+        <Preference
+            android:key="pref_key_protocol"
+            android:title="开源许可"
+            android:summary="请遵守开源协议" />
+        <Preference
+            android:key="pref_key_code"
+            android:title="源代码"
+            android:summary="Github代码地址" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

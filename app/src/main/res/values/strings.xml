@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Mvp</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_seting">设置</string>
+    <string name="title_videos">视频</string>
+    <string name="title_news">新闻</string>
+    <string name="title_my">我</string>
+</resources>
