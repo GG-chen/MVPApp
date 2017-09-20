@@ -49,6 +49,8 @@ public class VideoInfo implements Parcelable {
 //    private String latest;
     private String ptime;
     private String m3u8_url;
+    //下载时的Id
+    private int id;
 
     /**
      * 下载地址，可能有多个视频源，统一用一个字段
@@ -74,6 +76,14 @@ public class VideoInfo implements Parcelable {
      * 是否收藏
      */
     private boolean isCollect;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getVid() {
         return vid;
@@ -203,6 +213,8 @@ public class VideoInfo implements Parcelable {
         isCollect = collect;
     }
 
+
+
     @Override
     public String toString() {
         return "VideoBean{" +
@@ -222,6 +234,7 @@ public class VideoInfo implements Parcelable {
                 ", downloadStatus=" + downloadStatus +
                 ", downloadSpeed=" + downloadSpeed +
                 ", isCollect=" + isCollect +
+                ", id=" + id +
                 '}';
     }
 
@@ -247,6 +260,7 @@ public class VideoInfo implements Parcelable {
         dest.writeLong(this.loadedSize);
         dest.writeInt(this.downloadStatus);
         dest.writeLong(this.downloadSpeed);
+        dest.writeInt(this.id);
         dest.writeByte(this.isCollect ? (byte) 1 : (byte) 0);
     }
 
@@ -269,6 +283,7 @@ public class VideoInfo implements Parcelable {
         this.loadedSize = in.readLong();
        this.downloadStatus = in.readInt();
         this.downloadSpeed = in.readLong();
+        this.id = in.readInt();
         this.isCollect = in.readByte() != 0;
     }
     @Keep
@@ -286,6 +301,30 @@ public class VideoInfo implements Parcelable {
         this.m3u8Hd_url = m3u8Hd_url;
         this.ptime = ptime;
         this.m3u8_url = m3u8_url;
+        this.videoUrl = videoUrl;
+        this.totalSize = totalSize;
+        this.loadedSize = loadedSize;
+        this.downloadStatus = downloadStatus;
+        this.downloadSpeed = downloadSpeed;
+        this.isCollect = isCollect;
+    }
+
+    @Generated(hash = 1668361374)
+    public VideoInfo(String vid, String mp4Hd_url, String cover, String title, String sectiontitle,
+            String mp4_url, int length, String m3u8Hd_url, String ptime, String m3u8_url, int id,
+            String videoUrl, long totalSize, long loadedSize, int downloadStatus, long downloadSpeed,
+            boolean isCollect) {
+        this.vid = vid;
+        this.mp4Hd_url = mp4Hd_url;
+        this.cover = cover;
+        this.title = title;
+        this.sectiontitle = sectiontitle;
+        this.mp4_url = mp4_url;
+        this.length = length;
+        this.m3u8Hd_url = m3u8Hd_url;
+        this.ptime = ptime;
+        this.m3u8_url = m3u8_url;
+        this.id = id;
         this.videoUrl = videoUrl;
         this.totalSize = totalSize;
         this.loadedSize = loadedSize;

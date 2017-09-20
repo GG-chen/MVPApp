@@ -21,4 +21,7 @@
         <attr name="rv_zoomScale" format="float" />
         <attr name="rv_listMode" format="boolean"/>
     </declare-styleable>
+
+    <attr name="custom_backgroud" format="reference|color" />
+    <attr name="custom_textcolor" format="reference|color" />
 </resources>

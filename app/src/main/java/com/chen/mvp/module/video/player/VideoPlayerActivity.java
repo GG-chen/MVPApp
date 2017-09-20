@@ -24,7 +24,9 @@ import com.chen.mvp.engine.danmaku.DanmakuParser;
 import com.chen.mvp.local.table.DanmakuInfo;
 import com.chen.mvp.local.table.VideoInfo;
 import com.chen.mvp.module.base.BaseActivity;
+import com.chen.mvp.module.manage.download.DownloadActivity;
 import com.chen.mvp.utils.CommonConstant;
+import com.chen.mvp.utils.DownLoadHelper;
 import com.chen.mvp.utils.ToastUtil;
 import com.dl7.player.danmaku.OnDanmakuListener;
 import com.dl7.player.media.IjkPlayerView;
@@ -147,6 +149,8 @@ public class VideoPlayerActivity extends BaseActivity<IVideoPresenter> implement
                         }
                     });
                 }*/
+                DownLoadHelper.start(mVideoData);
+                DownloadActivity.launch(this,1);
                 ToastUtil.showShortToast("开始下载...");
                 break;
         }

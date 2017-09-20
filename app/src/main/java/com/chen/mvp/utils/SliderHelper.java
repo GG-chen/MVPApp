@@ -45,9 +45,7 @@ public final class SliderHelper {
                                     if (NewsUtils.isNewsPhotoSet(adData.getTag())) {
                                         PhotoActivity.launch(context, adData.getUrl());
                                     } else if (NewsUtils.isNewsSpecial(adData.getTag())) {
-                                        //SpecialActivity.launch(context, adData.getUrl());
                                     } else {
-//                                        NewsDetailActivity.launch(context, adData.getUrl());
                                         NewsArticleActivity.launch(context, adData.getUrl());
                                     }
                                 }

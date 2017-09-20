@@ -37,6 +37,8 @@
         <activity
             android:name=".module.manage.setting.SettingActivity"
             android:screenOrientation="portrait" />
+       <activity android:name=".module.manage.download.DownloadActivity"
+           android:screenOrientation="portrait" />
 
     </application>
 

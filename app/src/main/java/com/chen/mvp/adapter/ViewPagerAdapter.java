@@ -39,7 +39,6 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        Logger.d("why" + mTitles.size());
         return mTitles.get(position);
     }
 

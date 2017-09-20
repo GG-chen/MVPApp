@@ -18,4 +18,5 @@ public interface IRxBusPresenter extends IBasePresenter {
      * 注销
      */
     void unregisterRxBus();
+
 }

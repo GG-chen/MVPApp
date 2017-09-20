@@ -142,7 +142,7 @@ public class RetrofitService {
                 Logger.d("LogTAG", "request.body() == null");
             }
             //打印url信息
-            Logger.w(request.url() + (request.body() != null ? "?" + _parseParams(request.body(), requestBuffer) : ""));
+           // Logger.w(request.url() + (request.body() != null ? "?" + _parseParams(request.body(), requestBuffer) : ""));
             final Response response = chain.proceed(request);
 
             return response;

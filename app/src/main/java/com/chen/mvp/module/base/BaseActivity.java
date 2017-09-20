@@ -11,7 +11,9 @@ import com.chen.mvp.AndroidApplication;
 import com.chen.mvp.R;
 import com.chen.mvp.injector.components.ApplicationComponent;
 import com.chen.mvp.injector.modules.ActivityModule;
+import com.chen.mvp.utils.PreferencesUtils;
 import com.chen.mvp.widget.EmptyLayout;
+import com.orhanobut.logger.Logger;
 import com.trello.rxlifecycle.LifecycleTransformer;
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 
@@ -39,6 +41,11 @@ public abstract class BaseActivity<T extends IBasePresenter> extends RxAppCompat
 
     @Override
     protected void onCreate(@android.support.annotation.Nullable Bundle savedInstanceState) {
+        if (!PreferencesUtils.getBoolean(this,"isNight")) {
+            setTheme(R.style.DayTheme);
+        } else {
+            setTheme(R.style.NightTheme);
+        }
         super.onCreate(savedInstanceState);
         setContentView(attachLayoutRes());
         ButterKnife.bind(this);
@@ -159,4 +166,5 @@ public abstract class BaseActivity<T extends IBasePresenter> extends RxAppCompat
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="?attr/custom_backgroud"
     tools:context="com.chen.mvp.module.main.MainActivity">
 
     <FrameLayout
@@ -14,13 +15,14 @@
         android:layout_height="0dp"
         android:layout_weight="1">
     </FrameLayout>
-
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
+    <com.ashokvarma.bottomnavigation.BottomNavigationBar
+        android:id="@+id/bottom_navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
-        app:menu="@menu/navigation" />
+        app:bnbMode="mode_shifting"
+        app:bnbBackgroundStyle="background_style_static"
+        app:bnbBackgroundColor="?attr/custom_backgroud"
+        />
 
 </LinearLayout>

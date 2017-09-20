@@ -3,6 +3,7 @@ package com.chen.mvp.injector.components;
 import android.content.Context;
 
 import com.chen.mvp.injector.modules.ApplicationModule;
+import com.chen.mvp.local.dao.DaoSession;
 import com.chen.mvp.rxbus.RxBus;
 
 import javax.inject.Singleton;
@@ -17,4 +18,5 @@ import dagger.Component;
 public interface ApplicationComponent {
     Context getContext();
     RxBus getRxBus();
+    DaoSession getDaoSession();
 }

@@ -37,10 +37,37 @@
     </style>
     <style name="news_content">
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:textColor">?attr/custom_textcolor</item>
     </style>
     <style name="special_text">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@android:color/holo_red_light</item>
+    </style>
+    <style name="download_progress">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="max">100</item>
+        <item name="progress">0</item>
+        <item name="progress_unreached_color">#CCCCCC</item>
+        <item name="progress_reached_color">#3498DB</item>
+        <item name="progress_text_size">12sp</item>
+        <item name="progress_text_color">#3498DB</item>
+        <item name="progress_reached_bar_height">2dp</item>
+        <item name="progress_unreached_bar_height">1dp</item>
+    </style>
+
+    <style name="DayTheme" >
+        <item name="custom_backgroud" >#f7f7f7</item>
+        <item name="custom_textcolor" >#525252</item>
+    </style>
+
+    <style name="NightTheme" >
+        <item name="custom_backgroud" >#1e1e2a</item>
+        <item name="custom_textcolor" >#868a96</item>
+    </style>
+
+
+    <style name="ToolbarTitleAppearance">
+        <item name="android:textColor">?attr/custom_textcolor</item>
     </style>
 </resources>

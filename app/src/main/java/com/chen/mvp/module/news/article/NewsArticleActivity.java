@@ -32,7 +32,6 @@ import butterknife.BindView;
  */
 
 public class NewsArticleActivity extends BaseSwipeBackActivity<IBasePresenter> implements INewsArticleView {
-    private static final String SHOW_POPUP_DETAIL = "ShowPopupDetail";
     private static final String NEWS_ID_KEY = "NewsIdKey";
 
 
@@ -50,14 +49,8 @@ public class NewsArticleActivity extends BaseSwipeBackActivity<IBasePresenter> i
     EmptyLayout mEmptyLayout;
 
 
-    private int mToolbarHeight;
-    private int mTopBarHeight;
-    private Animator mTopBarAnimator;
-    private int mLastScrollY = 0;
-    // 最小触摸滑动距离
-    private int mMinScrollSlop;
-    private String mNewsId;
     private String mNextNewsId;
+    private String mNewsId;
 
     @Override
     protected void updateViews() {
@@ -86,6 +79,7 @@ public class NewsArticleActivity extends BaseSwipeBackActivity<IBasePresenter> i
 
     @Override
     public void loadData(NewsDetailInfo newsDetailBean) {
+        mToolbar.setTitle(newsDetailBean.getTitle());
         RichText.from(newsDetailBean.getBody())
                 .into(mTvContent);
         _handleSpInfo(newsDetailBean.getSpinfo());

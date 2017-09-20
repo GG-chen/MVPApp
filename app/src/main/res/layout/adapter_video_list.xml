@@ -7,7 +7,7 @@
     android:layout_gravity="center"
     android:gravity="center"
     android:layout_margin="5dp"
-    android:background="@android:color/white"
+    android:background="?attr/custom_backgroud"
     android:orientation="vertical">
 
     <ImageView
@@ -25,6 +25,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="8dp"
+        android:textColor="?attr/custom_textcolor"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 </LinearLayout>
 

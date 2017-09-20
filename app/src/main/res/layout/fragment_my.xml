@@ -3,6 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="?attr/custom_backgroud"
+
     >
 
     <RelativeLayout
@@ -33,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:text="点击登录"
-                android:textColor="@android:color/white"
+                android:textColor="?attr/custom_textcolor"
                 android:textSize="16sp"
                 />
         </LinearLayout>
@@ -59,7 +61,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="?attr/selectableItemBackground"
             android:gravity="center"
             android:orientation="vertical"
             >
@@ -76,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="喜欢"
-                android:textColor="#676767"
+                android:textColor="?attr/custom_textcolor"
                 android:textSize="14sp"
                 />
         </LinearLayout>
@@ -86,7 +87,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="?attr/selectableItemBackground"
             android:gravity="center"
             android:orientation="vertical"
             >
@@ -103,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="影迹"
-                android:textColor="#676767"
+                android:textColor="?attr/custom_textcolor"
                 android:textSize="14sp"
                 />
         </LinearLayout>
@@ -113,7 +113,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="?attr/selectableItemBackground"
             android:gravity="center"
             android:orientation="vertical"
             >
@@ -130,7 +129,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="分享"
-                android:textColor="#676767"
+                android:textColor="?attr/custom_textcolor"
                 android:textSize="14sp"
                 />
         </LinearLayout>
@@ -139,7 +138,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="8dp"
-        android:background="#EFEFED"
+        android:background="?attr/selectableItemBackground"
         />
 
     <LinearLayout
@@ -164,16 +163,15 @@
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
             android:text="夜间模式"
-            android:textColor="#060606"
+            android:textColor="?attr/custom_textcolor"
             android:textSize="15sp"
             />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <Switch
+            android:id="@+id/st_theme"
             android:layout_marginRight="8dp"
-            android:src="@drawable/ic_go"
-            />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <View
@@ -187,7 +185,6 @@
         android:id="@+id/service"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="?attr/selectableItemBackground"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         >
@@ -205,7 +202,7 @@
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
             android:text="客服中心"
-            android:textColor="#060606"
+            android:textColor="?attr/custom_textcolor"
             android:textSize="15sp"
             />
 
@@ -228,7 +225,6 @@
         android:id="@+id/update"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="?attr/selectableItemBackground"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         >
@@ -246,7 +242,7 @@
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
             android:text="应用更新"
-            android:textColor="#060606"
+            android:textColor="?attr/custom_textcolor"
             android:textSize="15sp"
             />
 
@@ -269,7 +265,6 @@
         android:id="@+id/reply"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="?attr/selectableItemBackground"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         >
@@ -287,7 +282,7 @@
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
             android:text="意见反馈"
-            android:textColor="#060606"
+            android:textColor="?attr/custom_textcolor"
             android:textSize="15sp"
             />
 
@@ -303,7 +298,7 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_marginLeft="48dp"
-        android:background="#F2F2F2"
+        android:background="?attr/custom_backgroud"
         />
 
 </LinearLayout>

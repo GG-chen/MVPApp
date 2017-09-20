@@ -23,9 +23,15 @@ android {
         }
     }
 
+    //recommend 防止出现 Cannot merge new index 65553 into a non-jumbo instruction 错误
+    dexOptions {
+        jumboMode = true
+    }
+
     greendao{
-        schemaVersion 4
-//            targetGenDir 'src/main/java'
+        schemaVersion 1
+        daoPackage 'com.chen.mvp.local.dao'
+        targetGenDir 'src/main/java'
     }
 }
 
@@ -63,6 +69,7 @@ dependencies {
     compile 'com.miguelcatalan:materialsearchview:1.0.1'
     // greendao
     compile 'org.greenrobot:greendao:3.1.0'
+    compile'org.greenrobot:greendao-generator:3.0.0'
     // logger
     compile 'com.orhanobut:logger:1.15'
     //BaseRecyclerViewAdapterHelper
@@ -99,4 +106,10 @@ dependencies {
     compile 'com.alibaba:fastjson:1.2.23'
     //licensesdialog
     compile('de.psdev.licensesdialog:licensesdialog:1.8.3')
+    //filedownloader
+    compile 'com.liulishuo.filedownloader:library:1.6.5'
+    // progressbar
+    compile 'com.daimajia.numberprogressbar:library:1.2'
+    //bottom-navigation-bar
+    compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.2'
 }

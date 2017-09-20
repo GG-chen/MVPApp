@@ -19,7 +19,7 @@
         android:id="@+id/ll_edit_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
+        android:background="?attr/custom_backgroud"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -31,7 +31,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="3dp"
             android:layout_weight="1"
-            android:background="@android:color/white"
+            android:background="?attr/custom_backgroud"
             android:focusableInTouchMode="true"
             android:gravity="center_vertical"
             android:hint="发射弹幕吧"
@@ -50,7 +50,7 @@
             android:layout_marginRight="12dp"
             app:tag_border_color="@color/colorAccent"
             app:tag_bg_color="@color/colorAccent"
-            app:tag_text_color="@android:color/white"
+            app:tag_text_color="?attr/custom_textcolor"
             app:tag_press_feedback="false"
             android:text="发表"/>
     </LinearLayout>
@@ -65,6 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="right|center_vertical"
+        android:background="?attr/custom_backgroud"
         android:orientation="horizontal">
 
         <ImageView
@@ -80,8 +81,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#dddddd"
+        android:background="?attr/custom_backgroud"
+        android:textColor="?attr/custom_textcolor"
         android:gravity="center"
-        android:text="Something"/>
+        android:text="nothing"/>
 
 </LinearLayout>

@@ -18,4 +18,6 @@
     <dimen name="toolbar_height">56dp</dimen>
     <dimen name="toolbar_margin_top">0dp</dimen>
     <dimen name="pull_critical_distance">70dp</dimen>
+    <dimen name="dp128">128dp</dimen>
+    <dimen name="dp72">72dp</dimen>
 </resources>

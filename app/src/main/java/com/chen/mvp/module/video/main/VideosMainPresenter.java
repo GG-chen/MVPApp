@@ -66,6 +66,30 @@ public class VideosMainPresenter implements IBasePresenter {
 
     @Override
     public void getMoreData() {
+        RetrofitService.getVideoList(mVideoId, mPage)
+                .compose(mView.<List<VideoInfo>>bindToLife())
+                .subscribe(new Subscriber<List<VideoInfo>>() {
+                    @Override
+                    public void onCompleted() {
 
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Logger.e(e.toString());
+                        mView.showError(new EmptyLayout.OnRetryListener() {
+                            @Override
+                            public void onRetry() {
+                                getData();
+                            }
+                        });
+                    }
+
+                    @Override
+                    public void onNext(List<VideoInfo> videoInfos) {
+                        mView.loadMoreData(videoInfos);
+                        mPage++;
+                    }
+                });
     }
 }

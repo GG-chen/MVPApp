@@ -15,7 +15,9 @@ import com.chen.mvp.injector.modules.NewsMainModule;
 import com.chen.mvp.local.table.NewsTypeInfo;
 import com.chen.mvp.module.base.BaseFragment;
 import com.chen.mvp.module.base.IRxBusPresenter;
+import com.chen.mvp.module.manage.download.DownloadActivity;
 import com.chen.mvp.module.news.newslist.NewsListFragment;
+import com.chen.mvp.utils.ToastUtil;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
 
 import java.util.ArrayList;
@@ -58,6 +60,7 @@ public class NewsMainFragment extends BaseFragment<IRxBusPresenter> implements I
             @Override
             public boolean onQueryTextSubmit(String query) {
                 //Do some magic
+                ToastUtil.showShortToast(query);
                 return false;
             }
 
@@ -122,6 +125,7 @@ public class NewsMainFragment extends BaseFragment<IRxBusPresenter> implements I
             case R.id.menu_search:
                 break;
             case R.id.menu_download:
+                DownloadActivity.launch(mContext,0);
                 break;
         }
 
